@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SagacIITy</title>
+    <title>ANODEC</title>
     <style>
         body {
             margin: 0;
@@ -56,7 +56,7 @@
     </head>
 <body>
     <div class="background-div">
-        <a href="index.html" style="text-decoration: none;"><div><p style="padding-top: 10px; padding-right: 80%; font-size: 48px; font-weight: 600; font-family: 'Times New Roman', Times, serif; color: black;">Arka Pal</p>
+        <a href="index.html" style="text-decoration: none;"><div><p style="padding-top: 10px; padding-right: 80%; font-size: 36px; font-weight: 600; font-family: 'Times New Roman', Times, serif; color: black;">Arka Pal</p>
         </div></a>
         <p style="padding-top: 150px; font-size: 36px; font-weight: 300; font-family: 'Times New Roman', Times, serif;">PROJECT DESCRIPTION</p>
         
@@ -75,27 +75,26 @@
             
           </div>
           <div class="col-6">
-            <h1 style="font-size: 55px;">Teleoperated and Autonomous Vehicle</h1>
-            <p> December 22, 2077 &nbsp; <span><a href="index.html" style="text-decoration: none;"><span style="color: red;">Arka Pal</span></a></span> </p>
+            <h1 style="font-size: 55px;">Neural differential controller on PAM driven muscle</h1>
+            <p> May 2023-July 2023 &nbsp; <span><a href="index.html" style="text-decoration: none;"><span style="color: red;">Friedrich Alexander University, Germany</span></a></span> </p>
             <hr>
-            <p style="line-height: 1.5;">I have started working on this project from my 4th year as a part of Bachelor thesis and I
-            am still working on the same. The main features of this project is explained below. </p>
-            <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/911223404?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Compiled_1_SagacIITy_left_right"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <p style="line-height: 1.5;">During the summer of 2023, I had the opportunity to perform a research 
+            internship at the Friedrich Alexander University of Erlangen Nuremberg(Germany) as a DAAD-WISE intern.</p>
+        
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7HkXKy0WuRw?si=y1zS1oZaYa1TlfyH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
-            <p style="line-height: 1.5;"><b>1. Sending driving command to the remote vehicle: </b>For remote operation the obvious
-            first step is to send driving command remotely to the actual vehicle. This has been achieved using a multi-client 
-        server architecture where, the driving command from a Logitech G29 gear is send via internet to the electric vehcile. 
-    It has been ensured that this communication process is efficient and robust to latency of the internet connection.</p>
+            <p style="line-height: 1.5;">In this time I have worked on a new data-driven controller 
+                <a href="https://ieeexplore.ieee.org/iel7/7782633/7912304/10175647.pdf">ANODEC</a>.
+            ANODEC or Automatic Neural-Ordinary Differential Equation Control, is a  a data-efficient automatic design of
+            output feedback controllers for finite-time reference tracking in systems with unknown nonlinear dynamics.
+            First I have gatherd few seconds of data to develop the model of the system as a NDE(Neural Differential Equation) model. After some tuning
+            and playing with the parameters, when the dynamics was captured, I used the 
+            <a href="https://github.com/SimiPixel/chain_control">chain_control</a> package developed by Simon Bachhuber
+            to get a controller based on another NDE. After that, we have compared the performance of the controller on some
+            known and unknown trajectories with a conventional PID controller. The real-time integration of chain_control was
+            done using ROS2 framework and I really every bit of this process!    
+            </p>
             </div>
-
-            <p style="line-height: 1.5;"><b>2. Implementation of steering and acceleration command in the vehicle: </b>To 
-            actually achieve the steering command the motor attached to a power steering is used. In this case the motor is a 
-        brushless DC motor. The speed of the motor is controlled by controlling input voltage of this motor. To make sure 
-    the desired angle is achieved a modified PID controller is used</p>
-
-    <p style="line-height: 1.5;">In the above video you can see, my guide is driving the electric shuttle remotely 
-    from the lab, whereas the car is moving inside the campus of IIT Bhubaneswar.</p>
-                </div>
           <div class="col-3">
             
           </div>
